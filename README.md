@@ -13,14 +13,7 @@
 ## Install
 
 ```fish
-$ omf install omf-wakatime
-```
-
-
-## Usage
-
-```fish
-$ omf-wakatime
+$ omf install https://github.com/ThatExtraBit/omf-plugin-wakatime
 ```
 
 
