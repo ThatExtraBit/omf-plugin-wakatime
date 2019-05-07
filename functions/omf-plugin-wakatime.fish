@@ -1,4 +1,5 @@
-set plugin_version=1.0.2
+set plugin_version "1.0.3"
+
 function _wt_current_directory
   if echo (pwd) | grep -qEi "^/Users/$USER/Dev/wf/dapi/"
       echo (pwd) | sed "s#^/Users/$USER/Dev/wf/dapi/\\([^/]*\\).*#\\1#"
@@ -7,12 +8,12 @@ function _wt_current_directory
   end
 end
 
-
 function _wt_last_command
     echo $history[1] | cut -d ' ' -f1
 end
 #
-function wt_heartbeet --on-event fish_postexec
+function wt_heartbeet
+#--on-event fish_postexec
   set --local current_dir (_wt_current_directory)
   set --local last_cmd (_wt_last_command)
   set --local fish_version (fish --version | cut -d ' ' -f3)
